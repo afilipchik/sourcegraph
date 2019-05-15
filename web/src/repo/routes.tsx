@@ -16,39 +16,20 @@ const TreePage = lazyComponent(() => import('./TreePage'), 'TreePage')
 
 const RepositoryGitDataContainer = lazyComponent(
     () => import('./RepositoryGitDataContainer'),
-    'RepositoryGitDataContainer',
-    require.resolveWeak('./RepositoryGitDataContainer')
+    'RepositoryGitDataContainer'
 )
-const RepositoryCommitPage = lazyComponent(
-    () => import('./commit/RepositoryCommitPage'),
-    'RepositoryCommitPage',
-    require.resolveWeak('./commit/RepositoryCommitPage')
-)
+const RepositoryCommitPage = lazyComponent(() => import('./commit/RepositoryCommitPage'), 'RepositoryCommitPage')
 const RepositoryBranchesArea = lazyComponent(
     () => import('./branches/RepositoryBranchesArea'),
-    'RepositoryBranchesArea',
-    require.resolveWeak('./branches/RepositoryBranchesArea')
+    'RepositoryBranchesArea'
 )
 const RepositoryReleasesArea = lazyComponent(
     () => import('./releases/RepositoryReleasesArea'),
-    'RepositoryReleasesArea',
-    require.resolveWeak('./releases/RepositoryReleasesArea')
+    'RepositoryReleasesArea'
 )
-const RepoSettingsArea = lazyComponent(
-    () => import('./settings/RepoSettingsArea'),
-    'RepoSettingsArea',
-    require.resolveWeak('./settings/RepoSettingsArea')
-)
-const RepositoryCompareArea = lazyComponent(
-    () => import('./compare/RepositoryCompareArea'),
-    'RepositoryCompareArea',
-    require.resolveWeak('./compare/RepositoryCompareArea')
-)
-const RepositoryStatsArea = lazyComponent(
-    () => import('./stats/RepositoryStatsArea'),
-    'RepositoryStatsArea',
-    require.resolveWeak('./stats/RepositoryStatsArea')
-)
+const RepoSettingsArea = lazyComponent(() => import('./settings/RepoSettingsArea'), 'RepoSettingsArea')
+const RepositoryCompareArea = lazyComponent(() => import('./compare/RepositoryCompareArea'), 'RepositoryCompareArea')
+const RepositoryStatsArea = lazyComponent(() => import('./stats/RepositoryStatsArea'), 'RepositoryStatsArea')
 
 export const repoContainerRoutes: ReadonlyArray<RepoContainerRoute> = [
     {
